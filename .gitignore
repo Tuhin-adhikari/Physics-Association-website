@@ -1,0 +1,22 @@
+# OS and Editor
+.DS_Store
+Thumbs.db
+node_modules/
+*.log
+*.tmp
+
+# VSCode
+.vscode/
+
+# Env and config
+.env
+.env.local
+.env.production
+
+# Build
+dist/
+build/
+
+# Others
+*.zip
+*.bak
