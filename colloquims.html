@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSA | Physics Association</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Crimson+Text&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!--Video Background-->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="videos/Atom.mp4" type="video/mp4" />
+        Your browser doesn't support the video
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="glass navbar p-4 flex items-center justify-between sticky top-0 z-50 w-full">
+        <div class="flex items-center logo">
+            <img src="images/PSA_logo.png" alt="PSA Logo" class="h-10 w-auto mr-3" />
+        </div>
+        <div class="text-xl sm:text-2xl font-bold text-center flex-1">
+            🔭 PSA – Physics Students' Association
+        </div>
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none z-50 hover:text-gray-300">&#9776;</button>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdown"
+        class="hidden fixed top-0 right-0 h-full w-64 bg-black bg-opacity-90 text-white p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="close-btn" class="text-xl absolute top-4 right-6 font-bold">✖</button>
+        <ul class="mt-16 flex flex-col gap-6 text-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calender.html">Calendar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="bi-monthly.html">Bi monthly events</a></li>
+            <li><a href="colloquims.html">Friday Colloquiums</a></li>
+        </ul>
+    </div>
+
+    <!-- Param Colloquium Section -->
+    <section class="relative z-10 p-6 sm:p-12 text-white">
+        <div class="max-w-4xl mx-auto bg-black bg-opacity-40 backdrop-blur-md rounded-xl shadow-lg p-6 sm:p-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-green-300 mb-2">🧠 Param</h2>
+            <p class="text-gray-400 mb-2">📅 Date: <span class="font-semibold">1st August 2025</span></p>
+            <p class="text-gray-400 mb-4">📍 Venue: <span class="font-semibold">PG AV room</span></p>
+
+            <h3 class="text-xl sm:text-2xl font-semibold text-blue-300 mb-4">“From Innovation to Creation – All in One
+                Space”</h3>
+
+            <p class="mb-6">Param is a vibrant ecosystem blending science, art, tech, and culture. We believe knowledge
+                isn’t just taught — it’s experienced.</p>
+
+            <div class="mb-6">
+                <h4 class="text-lg font-semibold text-purple-300 mb-2">🌐 Key Focus Areas</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>
+                        <strong>🔬 Science Innovation:</strong> Three displays of prototypes we’ve created, along with
+                        how we can experiment with them to learn about science.
+                    </li>
+                    <li>
+                        <strong>📢 Science Communication:</strong> How we bring science to the general public through
+                        workshops, collaborations, and outreach activities.
+                    </li>
+                    <li>
+                        <strong>📖 Science Magazine:</strong> Focus, intent, and uniqueness of Param Science Magazines.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-lg font-semibold text-yellow-300 mb-2">🧬 About Param</h4>
+                <p>
+                    Param is a transdisciplinary ecosystem and collaborative platform that brings together science,
+                    history, art, culture, and technology to ignite curiosity, inspire collaboration, and create
+                    meaningful societal change.
+                    <br /><br />
+                    At our core, we are community-builders — educators, artists, scientists, technologists, performers,
+                    and dreamers — united by a shared belief: <span class="italic">knowledge should be lived, not just
+                        learned</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-400 py-4 bg-black bg-opacity-30 backdrop-blur mt-auto">
+        © 2025 PSA – Physics Students' Association | St. Joseph’s University
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

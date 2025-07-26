@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSA | Bi-Monthly Events</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Crimson+Text&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="videos/Atom.mp4" type="video/mp4" />
+        Your browser doesn't support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="glass navbar p-4 flex items-center justify-between sticky top-0 z-50 w-full">
+        <div class="flex items-center logo">
+            <img src="images/PSA_logo.png" alt="PSA Logo" class="h-10 w-auto mr-3" />
+        </div>
+        <div class="text-xl sm:text-2xl font-bold text-center flex-1">
+            🔭 PSA – Physics Students' Association
+        </div>
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none z-50 hover:text-gray-300">&#9776;</button>
+    </nav>
+
+    <!-- Dropdown -->
+    <div id="dropdown"
+        class="hidden fixed top-0 right-0 h-full w-64 bg-black bg-opacity-90 text-white p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="close-btn" class="text-xl absolute top-4 right-6 font-bold">✖</button>
+        <ul class="mt-16 flex flex-col gap-6 text-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calender.html">Calendar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="bi-monthly.html">Bi monthly events</a></li>
+            <li><a href="colloquims.html">Friday Colloquims</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <section class="text-center py-20 fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold text-purple-300">📅 Bi-Monthly Events</h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
+            Regular engagement activities, fun experiments, quizzes and more every two weeks!
+        </p>
+    </section>
+
+    <!-- Events -->
+    <section class="px-4 md:px-20 py-10 fade-slide">
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card" data-title="🧠 Science Quiz Showdown"
+                data-description="A battle of minds featuring physics trivia and rapid fire rounds."
+                data-date="April 5, 2025">
+                <h3 class="text-xl font-bold text-white">🧠 Science Quiz Showdown</h3>
+                <p class="text-gray-300 mt-2">April 5, 2025</p>
+            </div>
+            <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card"
+                data-title="🔬 DIY Lab: Optics at Home"
+                data-description="Build simple experiments using household items and lenses."
+                data-date="April 20, 2025">
+                <h3 class="text-xl font-bold text-white">🔬 DIY Lab: Optics at Home</h3>
+                <p class="text-gray-300 mt-2">April 20, 2025</p>
+            </div>
+            <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card" data-title="🛰️ Space Debate"
+                data-description="A fun debate on whether space exploration is worth the cost." data-date="May 3, 2025">
+                <h3 class="text-xl font-bold text-white">🛰️ Space Debate</h3>
+                <p class="text-gray-300 mt-2">May 3, 2025</p>
+            </div>
+            <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card" data-title="⚛️ Magnetic Madness"
+                data-description="Demonstrations and games based on electromagnetism." data-date="May 18, 2025">
+                <h3 class="text-xl font-bold text-white">⚛️ Magnetic Madness</h3>
+                <p class="text-gray-300 mt-2">May 18, 2025</p>
+            </div> -->
+            <p class="text-center">Bi-monthly events will start shortly. Stay Tuned</p>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="event-modal"
+        class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full text-black relative">
+            <button id="close-modal"
+                class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-red-500">✖</button>
+            <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+            <p id="modal-date" class="text-sm text-gray-600 mb-4"></p>
+            <p id="modal-description" class="mb-6"></p>
+            <a href="register/index.html" target="_blank"
+                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">Register</a>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="text-center py-16 fade-slide">
+        <h2 class="text-2xl md:text-3xl text-white mb-4">Want to suggest a bi-monthly activity?</h2>
+        <a href="register/index.html" target="_blank"
+            class="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">Share Your Idea</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-400 py-4 bg-black bg-opacity-30 backdrop-blur mt-auto">
+        © 2025 PSA – Physics Students' Association | St. Joseph’s University
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/bi-monthly.js"></script>
+</body>
+
+</html>

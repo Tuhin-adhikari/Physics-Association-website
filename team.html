@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSA | Meet the Team</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Crimson+Text&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="videos/Atom.mp4" type="video/mp4" />
+        Your browser doesn't support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="glass navbar p-4 flex items-center justify-between sticky top-0 z-50 w-full">
+        <div class="flex items-center logo">
+            <img src="images/PSA_logo.png" alt="PSA Logo" class="h-10 w-auto mr-3" />
+        </div>
+        <div class="text-xl sm:text-2xl font-bold text-center flex-1">
+            🔭 PSA – Physics Students' Association
+        </div>
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none z-50 hover:text-gray-300">&#9776;</button>
+    </nav>
+
+    <!-- Dropdown -->
+    <div id="dropdown"
+        class="hidden fixed top-0 right-0 h-full w-64 bg-black bg-opacity-90 text-white p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="close-btn" class="text-xl absolute top-4 right-6 font-bold">✖</button>
+        <ul class="mt-16 flex flex-col gap-6 text-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calender.html">Calendar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="bi-monthly.html">Bi monthly events</a></li>
+            <li><a href="colloquims.html">Friday Colloquims</a></li>
+        </ul>
+    </div>
+
+    <!-- Team Section -->
+    <section class="px-4 py-16 text-white">
+        <h2 class="text-3xl md:text-4xl text-center font-bold mb-12">Meet the Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
+            <!-- Team member example -->
+            <!-- Disha Anne Maria -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Disha Anne Maria" data-role="President" data-image="images/Disha.jpg"
+                data-team="">
+                <img src="images/Disha.jpg" alt="Disha Anne Maria"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Disha Anne Maria</h3>
+                <p class="text-sm text-gray-300">President</p>
+            </div>
+
+            <!-- Himmel Lourdes Arun -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Himmel Lourdes Arun" data-role="Vice President" data-image="images/Himmel.jpg"
+                data-team="">
+                <img src="images/Himmel.jpg" alt="Himmel Lourdes Arun"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Himmel Lourdes Arun</h3>
+                <p class="text-sm text-gray-300">Vice President</p>
+            </div>
+
+            <!-- Dharmapuri Hiren Kumar -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Dharmapuri Hiren Kumar" data-role="General Secretary" data-image="images/team3.jpg"
+                data-team="">
+                <img src="images/team3.jpg" alt="Dharmapuri Hiren Kumar"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Dharmapuri Hiren Kumar</h3>
+                <p class="text-sm text-gray-300">General Secretary</p>
+            </div>
+
+            <!-- Megha -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Megha Elizabeth Vinu" data-role="Associate General Secretary" data-image="images/megha.jpg"
+                data-team="">
+                <img src="images/megha.jpg" alt="Megha"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Megha Elizabeth Vinu</h3>
+                <p class="text-sm text-gray-300">Associate General Secretary</p>
+            </div>
+
+            <!-- Leema -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Leema Rani Gs" data-role="Documentation Head" data-image="images/Leema.jpg"
+                data-team="Sourasish Batabyal, Treesa P A, Arushi Tiwari, Vivienne Arangaden, Rahul Dennis, Nandini, Avani">
+                <img src="images/Leema.jpg" alt="Leema"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Leema Rani G S</h3>
+                <p class="text-sm text-gray-300">Documentation Head</p>
+            </div>
+
+            <!-- Maya -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Maya" data-role="PR & Marketing Head" data-image="images/maya.jpg"
+                data-team="Gemin, Bushra Siddiqui, Neel Mahajan, Abhraham, Rahul Dennis">
+                <img src="images/maya.jpg" alt="Maya"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Maya</h3>
+                <p class="text-sm text-gray-300">PR & Marketing Head</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Praveen Kumar" data-role="Social Media Head" data-image="images/Praveen (PMCB).jpg"
+                data-team="Tejas, S.R.Siddharth, Syend Yunus Ahmed, Dhanush R, Aanishka Barua">
+                <img src="images/Praveen (PMCB).jpg" alt="Akhil Chandran"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Praveen Kumar</h3>
+                <p class="text-sm text-gray-300">Social Media Head</p>
+            </div>
+
+            <!-- Vaishnavi -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Vaishnavi" data-role="Art & Decor Head" data-image="images/Vaishnavi.jpg"
+                data-team="Abraham, Renous, Aliya, Harshita.P, Vrinda, Puneeth, Nandini, Avani, Amaar, Eldrin, Pradhan">
+                <img src="images/Vaishnavi.jpg" alt="Vaishnavi"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Vaishnavi.R.Iyer</h3>
+                <p class="text-sm text-gray-300">Art & Decor Head</p>
+            </div>
+
+            <!-- Tuhin -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Tuhin Adhikari" data-role="Technical Head" data-image="images/tuhin.jpg"
+                data-team="Manoj S, Shrivathsa Rajagopal Chakravarthy, Aanishka Barua, Sathyaprasad Shenoy">
+                <img src="images/tuhin.jpg" alt="Tuhin"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Tuhin Adhikari</h3>
+                <p class="text-sm text-gray-300">Technical Head</p>
+            </div>
+
+            <!-- Methew -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Mathew" data-role="Mathew" data-image="images/mathew.jpg"
+                data-team="">
+                <img src="images/mathew.jpg" alt="Mathew"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Mathew Vilangupara Saji</h3>
+                <p class="text-sm text-gray-300">Treasurer</p>
+            </div>
+
+            <!-- Praveen -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Praveen Kumar" data-role="Logistics Head" data-image="images/Praveen.jpg"
+                data-team="HIBA, M. Usha, Pradhan, Caroline, Vansh, Amaar, Eldrin, Tejas.P, S.R.SHARATH, Neel Mahajan, Syed Yunus Ahmed">
+                <img src="images/Praveen.jpg" alt="Praveen"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Praveen Kumar</h3>
+                <p class="text-sm text-gray-300">Logistics Head</p>
+            </div>
+
+            <!-- Het -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Het" data-role="Peer Mentor - 1st year" data-image="images/team12.jpg"
+                data-team="">
+                <img src="images/team12.jpg" alt="Het"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Het</h3>
+                <p class="text-sm text-gray-300">Peer Mentor - 1st year</p>
+            </div>
+
+            <!-- Spandana Kulkarni -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Spandana Kulkarni" data-role="Peer Mentor - 2nd year" data-image="images/Spandana.jpg"
+                data-team="">
+                <img src="images/Spandana.jpg" alt="Spandana"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Spandana Kulkarni</h3>
+                <p class="text-sm text-gray-300">Peer Mentor - 2nd year</p>
+            </div>
+
+            <!-- Ayesha -->
+            <div class="team-card cursor-pointer bg-black bg-opacity-50 rounded-2xl p-6 backdrop-blur-md shadow-lg text-center hover:scale-105 transform transition"
+                data-name="Ayesha Siddiqa" data-role="Peer Mentor - 3rd year" data-image="images/Ayesha.jpg"
+                data-team="">
+                <img src="images/Ayesha.jpg" alt="Ayesha"
+                    class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4" />
+                <h3 class="text-xl font-semibold text-purple-300">Aeysha Siddiqa</h3>
+                <p class="text-sm text-gray-300">Peer Mentor - 3rd year</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="team-modal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+        <div class="bg-gray-900 rounded-2xl p-6 w-11/12 max-w-lg text-center text-white relative shadow-2xl">
+            <button id="close-modal"
+                class="absolute top-3 right-4 text-2xl font-bold text-white hover:text-gray-300">✖</button>
+            <img id="modal-img" src="" alt="Member Image"
+                class="w-28 h-28 mx-auto rounded-full object-cover border-4 border-purple-400 mb-4">
+            <h3 id="modal-name" class="text-2xl font-bold text-purple-300 mb-2">Name</h3>
+            <p id="modal-role" class="text-sm mb-3 text-gray-300">Role</p>
+            <p id="modal-team" class="text-sm text-gray-400">Team Members: ...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-400 py-4 bg-black bg-opacity-30 backdrop-blur mt-auto">
+        © 2025 PSA – Physics Students' Association | St. Joseph’s University
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/team.js"></script>
+</body>
+
+</html>

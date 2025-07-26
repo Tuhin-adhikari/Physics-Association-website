@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="baseline.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"> -->
+
+
+
+    <!-- <link rel="stylesheet" href="futuristic.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"> -->
+
+    <!-- <link rel="stylesheet" href="classy.css"> -->
+
+    <link rel="stylesheet" href="css/futuristic.css">
+</head>
+
+<body>
+    <form action="#" class="form-container" method="POST">
+        <h2>Event Registration</h2>
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" name="name" id="name" required />
+        </div>
+        <div class="form-group">
+            <label for="regno">Registration Number:</label>
+            <input type="text" id="regno" name="regno" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+        </div>
+
+        <div class="form-group">
+            <label for="year">Year of Study:</label>
+            <select name="year" id="year" required>
+                <option value="">-- Select Year --</option>
+                <option value="1st year">1st year</option>
+                <option value="2nd year">2nd year</option>
+                <option value="3rd year">3rd year</option>
+                <option value="4th year">4th year</option>
+                <option value="PG 1st year">PG 1st year</option>
+                <option value="PG 2nd year">PG 2nd year</option>
+            </select>
+        </div>
+        <button type="submit"><a href="C:\Users\tushi\PSA\Webpage\events.html">Back</a></button>
+        <button type="submit">Register</button>
+    </form>
+</body>
+
+</html>

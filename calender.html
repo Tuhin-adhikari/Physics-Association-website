@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PSA | Calendar</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Crimson+Text&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="videos/Atom.mp4" type="video/mp4" />
+        Your browser doesn't support the video.
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="glass navbar p-4 flex items-center justify-between sticky top-0 z-50 w-full">
+        <div class="flex items-center logo">
+            <img src="images/PSA_logo.png" alt="PSA Logo" class="h-10 w-auto mr-3" />
+        </div>
+        <div class="text-xl sm:text-2xl font-bold text-center flex-1">
+            🔭 PSA – Physics Students' Association
+        </div>
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none z-50 hover:text-gray-300">&#9776;</button>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdown"
+        class="hidden fixed top-0 right-0 h-full w-64 bg-black bg-opacity-90 text-white p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <button id="close-btn" class="text-xl absolute top-4 right-6 font-bold">✖</button>
+        <ul class="mt-16 flex flex-col gap-6 text-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calender.html">Calendar</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="bi-monthly.html">Bi monthly events</a></li>
+            <li><a href="colloquims.html">Friday Colloquims</a></li>
+        </ul>
+    </div>
+
+    <!-- Calendar Section -->
+    <section class="px-4 md:px-20 py-10 text-center fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold text-purple-300 mb-6">🗓️ Academic Calendar</h1>
+        <p class="text-lg text-gray-300 mb-10">Explore upcoming PSA events across the academic year.</p>
+
+        <!-- Calendar Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Month Card Example -->
+
+            <div class="glass p-6 rounded-xl shadow-md text-left">
+                <h2 class="text-2xl font-bold text-purple-200 mb-3">July 2025</h2>
+                <ul class="text-gray-300 space-y-2">
+                    <li><strong>July 29:</strong> Investiture ceremony</li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-xl shadow-md text-left">
+                <h2 class="text-2xl font-bold text-purple-200 mb-3">August 2025</h2>
+                <ul class="text-gray-300 space-y-2">
+                    <li><strong>Aug 1:</strong> Param (Colloquims)</li>
+                </ul>
+            </div>
+
+            <div class="glass p-6 rounded-xl shadow-md text-left">
+                <h2 class="text-2xl font-bold text-purple-200 mb-3">September 2025</h2>
+                <ul class="text-gray-300 space-y-2">
+                    <li><strong></strong> Coming soon...</li>
+                </ul>
+            </div>
+
+            <!-- <div class="glass p-6 rounded-xl shadow-md text-left">
+                <h2 class="text-2xl font-bold text-purple-200 mb-3">October 2025</h2>
+                <ul class="text-gray-300 space-y-2">
+                    <li><strong>Oct 10:</strong> Bi-monthly Astro Quiz</li>
+                    <li><strong>Oct 21:</strong> Friday Colloquium – Lasers</li>
+                </ul>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-400 py-4 bg-black bg-opacity-30 backdrop-blur mt-auto">
+        © 2025 PSA – Physics Students' Association | St. Joseph’s University
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

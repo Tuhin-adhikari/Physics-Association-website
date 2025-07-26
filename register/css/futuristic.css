@@ -1,0 +1,96 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at center, #0b0f1a 0%, #000000 100%);
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: radial-gradient(white 1px, transparent 1px),
+                        radial-gradient(white 1px, transparent 1px);
+      background-size: 60px 60px;
+      background-position: 0 0, 30px 30px;
+    }
+
+    .form-container {
+      background: rgba(18, 18, 38, 0.95);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00f7ff44;
+      width: 90%;
+      max-width: 550px;
+      border: 1px solid #00f7ff55;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00f7ff;
+      font-size: 1.8rem;
+      position: relative;
+    }
+
+    .form-container h2::before {
+      content: "⚛";
+      position: absolute;
+      left: -30px;
+      top: 0;
+      font-size: 2rem;
+      color: #ffd700;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #d0d0ff;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #00f7ff88;
+      border-radius: 8px;
+      background-color: #0f1526;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #00f7ff;
+      box-shadow: 0 0 8px #00f7ffaa;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #00f7ff;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #00c2cc;
+      box-shadow: 0 0 12px #00f7ff99;
+    }
+
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 20px;
+      }
+    }
