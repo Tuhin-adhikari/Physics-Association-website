@@ -12,6 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Crimson+Text&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .event-card {
+            width: 240px;
+            height: 160px;
+        }
+
+        @media (min-width: 768px) {
+            .event-card {
+                width: 260px;
+                height: 150px;
+            }
+        }
+
+        #modal-image {
+            width: 500px;
+            height: auto;
+        }
+
+        @media (max-width: 540px) {
+            #modal-image {
+                width: 90vw;
+            }
+        }
+    </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -43,68 +67,48 @@
             <li><a href="events.html">Events</a></li>
             <li><a href="achievements.html">Achievements</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="bi-monthly.html">Bi monthly events</a></li>
+            <li><a href="bi-monthly.html">Dual monthly events</a></li>
             <li><a href="colloquims.html">Friday Colloquims</a></li>
         </ul>
     </div>
 
     <!-- Hero -->
     <section class="text-center py-20 fade-in">
-        <h1 class="text-4xl md:text-5xl font-bold text-purple-300">📅 Bi-Monthly Events</h1>
-        <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-bold text-purple-300">📅 Dual-Monthly Events</h1>
+        <p class="mt-4 text-lg text-gray-300 max-w-xl mx-auto">
             Regular engagement activities, fun experiments, quizzes and more every two weeks!
         </p>
     </section>
 
     <!-- Events -->
-    <section class="px-4 md:px-20 py-10 fade-slide">
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card" data-title="🧠 Science Quiz Showdown"
-                data-description="A battle of minds featuring physics trivia and rapid fire rounds."
-                data-date="April 5, 2025">
-                <h3 class="text-xl font-bold text-white">🧠 Science Quiz Showdown</h3>
-                <p class="text-gray-300 mt-2">April 5, 2025</p>
+    <section class="px-4 py-10 fade-slide">
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="glass p-4 rounded-lg shadow-lg cursor-pointer event-card flex flex-col justify-center items-start"
+                data-image="images/cross-circuit.jpg">
+                <h3 class="text-lg font-bold text-white leading-tight">🧩 Cross Circuit</h3>
+                <p class="text-gray-300 mt-1 text-sm">August 8, 2025 – 1 PM – N101</p>
             </div>
-            <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card"
-                data-title="🔬 DIY Lab: Optics at Home"
-                data-description="Build simple experiments using household items and lenses."
-                data-date="April 20, 2025">
-                <h3 class="text-xl font-bold text-white">🔬 DIY Lab: Optics at Home</h3>
-                <p class="text-gray-300 mt-2">April 20, 2025</p>
-            </div>
-            <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card" data-title="🛰️ Space Debate"
-                data-description="A fun debate on whether space exploration is worth the cost." data-date="May 3, 2025">
-                <h3 class="text-xl font-bold text-white">🛰️ Space Debate</h3>
-                <p class="text-gray-300 mt-2">May 3, 2025</p>
-            </div>
-            <div class="glass p-6 rounded-lg shadow-lg cursor-pointer event-card" data-title="⚛️ Magnetic Madness"
-                data-description="Demonstrations and games based on electromagnetism." data-date="May 18, 2025">
-                <h3 class="text-xl font-bold text-white">⚛️ Magnetic Madness</h3>
-                <p class="text-gray-300 mt-2">May 18, 2025</p>
-            </div> -->
-            <p class="text-center">Bi-monthly events will start shortly. Stay Tuned</p>
         </div>
     </section>
 
     <!-- Modal -->
     <div id="event-modal"
         class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 px-4">
-        <div class="bg-white rounded-lg p-6 max-w-md w-full text-black relative">
+        <div class="relative flex items-center justify-center">
             <button id="close-modal"
-                class="absolute top-2 right-3 text-xl font-bold text-gray-600 hover:text-red-500">✖</button>
-            <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
-            <p id="modal-date" class="text-sm text-gray-600 mb-4"></p>
-            <p id="modal-description" class="mb-6"></p>
-            <a href="register/index.html" target="_blank"
-                class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition">Register</a>
+                class="absolute top-3 right-3 text-white text-3xl font-bold hover:text-red-500 z-50">✖</button>
+            <img id="modal-image" src="images/cross-circuit.jpg" alt="Event Poster"
+                class="object-contain rounded-lg shadow-lg" />
         </div>
     </div>
 
     <!-- CTA -->
     <section class="text-center py-16 fade-slide">
         <h2 class="text-2xl md:text-3xl text-white mb-4">Want to suggest a bi-monthly activity?</h2>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYhOG_hRpC1rj4ApfiMwO5sdzAPEvdJSAh_U2iD3WHUOEEgg/viewform?usp=sharing&ouid=106538382697363163144" target="_blank"
-            class="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">Share Your Idea</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYhOG_hRpC1rj4ApfiMwO5sdzAPEvdJSAh_U2iD3WHUOEEgg/viewform?usp=sharing&ouid=106538382697363163144"
+            target="_blank" class="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">
+            Share Your Idea
+        </a>
     </section>
 
     <!-- Footer -->
