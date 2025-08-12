@@ -10,6 +10,7 @@ Built with 💡 HTML, Tailwind CSS, and JavaScript, the website hosts informatio
 - 👥 Team Members
 - 📚 Bi-monthly Reports
 - 📡 Friday Colloquiums
+- 🎮 Games
 
 ## 🚀 Features
 
@@ -24,11 +25,11 @@ Built with 💡 HTML, Tailwind CSS, and JavaScript, the website hosts informatio
 ```bash
 ├── css/
 ├── js/
-├── forms/
 ├── videos/
 ├── images/
 ├── index.html
 ├── events.html
 ├── team.html
+├── games.html
 ├── ...
 ```
