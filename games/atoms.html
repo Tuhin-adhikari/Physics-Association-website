@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atoms Collector — PSA Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .particle {
+            position: absolute;
+            font-size: 1.8rem;
+            user-select: none;
+            pointer-events: none;
+            will-change: transform, top;
+            transition: transform 140ms ease;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+        #magnet {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.4rem;
+            touch-action: none;
+            cursor: grab;
+            user-select: none;
+        }
+
+        #gameArea {
+            min-height: 480px;
+        }
+
+        /* small flair */
+        .disguised {
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+            transform: scale(1.05);
+        }
+
+        /* overlays */
+        .overlay {
+            backdrop-filter: blur(2px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-6">
+
+    <div class="w-full max-w-[1100px]">
+
+        <!-- Header / Back -->
+        <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-3">
+                <a href="games.html"
+                    class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded">⬅ Back</a>
+                <h1 class="text-xl font-bold">⚛️ Atoms Collector</h1>
+            </div>
+            <div id="hud" class="text-right text-lg font-semibold">
+                <div>⭐ Score: <span id="score">0</span></div>
+                <div>❤️ Lives: <span id="lives">3</span></div>
+            </div>
+        </div>
+
+        <!-- Game Container -->
+        <div id="gameArea"
+            class="relative bg-gray-800 border-4 border-blue-400 rounded-lg w-full h-[70vh] overflow-hidden">
+            <!-- Magnet -->
+            <div id="magnet" class="select-none">🧲</div>
+
+            <!-- Start Overlay -->
+            <div id="startScreen"
+                class="overlay absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75 p-6">
+                <h2 class="text-3xl font-bold mb-3">Welcome — Atoms Collector</h2>
+                <p class="mb-4 text-center max-w-xl">Move the magnet (🧲) using <b>Arrow Keys</b>, <b>Mouse</b> or
+                    <b>Drag / Touch</b> on mobile. Catch the <span class="text-green-300">atoms</span>, avoid the <span
+                        class="text-red-300">bombs</span>. Some particles may disguise mid-air!
+                </p>
+                <div class="flex gap-4">
+                    <button id="startBtn" class="bg-green-500 hover:bg-green-600 px-4 py-2 rounded">▶ Start
+                        Game</button>
+                </div>
+            </div>
+
+            <!-- Game Over -->
+            <div id="gameOver"
+                class="hidden absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center justify-center text-center">
+                <h1 class="text-3xl font-bold mb-4">💥 Game Over!</h1>
+                <p class="mb-4">Final Score: <span id="finalScore"></span></p>
+                <div class="flex gap-4">
+                    <button class="bg-green-500 px-4 py-2 rounded-lg hover:bg-green-600" id="replayBtn">🔄 Play
+                        Again</button>
+                    <button class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600" id="exitBtn">🚪 Exit</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/atoms.js"></script>
+</body>
+
+</html>

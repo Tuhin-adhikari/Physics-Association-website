@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper - Physics Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap">
+</head>
+
+<body
+    class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen flex flex-col items-center justify-start">
+
+    <!-- Header -->
+    <header class="w-full text-center py-6 bg-gradient-to-r from-purple-600 to-indigo-700 shadow-lg">
+        <h1 class="text-4xl font-bold" style="font-family: 'Orbitron', sans-serif;">⚛️ Physics Minesweeper</h1>
+    </header>
+
+    <!-- Scoreboard -->
+    <div
+        class="flex justify-between items-center w-11/12 md:w-3/4 bg-gray-800 text-white p-4 rounded-lg mt-6 shadow-lg">
+        <div class="text-xl">🔬 Score: <span id="score">0</span></div>
+        <div class="flex gap-3">
+            <button onclick="resetGame()"
+                class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-lg text-black font-bold">🔄 Reset</button>
+            <a href="games.html" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg text-white font-bold">⬅️
+                Back</a>
+        </div>
+    </div>
+
+    <!-- Game Board -->
+    <div id="board" class="grid mt-8 bg-gray-700 rounded-lg shadow-2xl"></div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="fixed inset-0 hidden bg-black bg-opacity-70 flex items-center justify-center">
+        <div class="bg-gray-900 text-white p-8 rounded-2xl shadow-lg text-center">
+            <h2 class="text-3xl mb-4">💥 Game Over!</h2>
+            <p class="text-lg mb-6">Your Score: <span id="finalScore">0</span></p>
+            <button onclick="resetGame()"
+                class="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg text-black font-bold">Play Again</button>
+        </div>
+    </div>
+
+    <script src="js/minesweeper.js"></script>
+</body>
+
+</html>
