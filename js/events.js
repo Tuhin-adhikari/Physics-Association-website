@@ -23,11 +23,15 @@ function showEventDetails(title, description, date, registerLink, rules = []) {
     registerButton.target = "_blank";
     registerButton.rel = "noopener noreferrer";
 
-    document.getElementById('event-detail').classList.remove('hidden');
+    const popup = document.getElementById('event-detail');
+    popup.classList.remove('hidden');
+    popup.classList.add('show');
     document.body.style.overflow = "hidden";
 }
 
 function closeEvent() {
-    document.getElementById('event-detail').classList.add('hidden');
+    const popup = document.getElementById('event-detail');
+    popup.classList.add('hidden');
+    popup.classList.remove('show');
     document.body.style.overflow = "auto";
 }
